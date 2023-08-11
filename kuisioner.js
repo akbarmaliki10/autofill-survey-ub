@@ -33,8 +33,8 @@ async function main() {
     await page.evaluate(() => {
         document.querySelector('input[type=submit]').click();
     });
-
     page.close()
+    
     page = await browser.newPage();
     await page.goto("https://siam.ub.ac.id/notifikasi.php");
     var allForm = await page.evaluate(() => {
