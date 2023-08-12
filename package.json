@@ -2,7 +2,8 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "prompt-sync": "^4.2.0",
-    "puppeteer": "^21.0.2"
+    "puppeteer": "^21.0.2",
+    "puppeteer-chromium-resolver": "^20.0.0"
   },
   "name": "autofill-survey-siam-ub",
   "version": "1.0.0",
@@ -15,8 +16,14 @@
   "description": "",
   "bin": "./kuisioner.js",
   "pkg": {
-    "assets": ["node_modules"],
-    "target": ["node18-linux-x64", "node18-mac-x64", "node18-win-x64"],
+    "assets": [
+      "node_modules"
+    ],
+    "targets": [
+      "node18-linux-x64",
+      "node18-mac-x64",
+      "node18-win-x64"
+    ],
     "outputPath": "dist"
   }
 }
