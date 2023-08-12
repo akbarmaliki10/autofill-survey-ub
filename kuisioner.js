@@ -103,13 +103,13 @@ async function main() {
         await page.goto("https://siam.ub.ac.id/" + hrefSurvey)
         console.log(hrefSurvey)
         await page.waitForSelector("tr.text td input")
+        await delay(1000)
         await page.evaluate(() => {
             var radio = document.querySelectorAll('tr.text td input[value|="5"]')
             for (let index = 0; index < radio.length; index++) {
                 radio[index].checked = true
             }
             document.getElementById("saran").value = "terima kasih semoga berkah"
-            delay(1000)
             document.getElementById("form_kuis").submit()
         })
         page.close()
