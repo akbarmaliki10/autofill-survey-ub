@@ -66,7 +66,7 @@ async function main() {
             page = await browser.newPage();
             await page.goto('https://siam.ub.ac.id/');
             await page.waitForSelector("input")
-            await delay(2000);
+            await delay(3000);
         
         
             console.log("Press CTRL + C or close browser windows to exit the program")
