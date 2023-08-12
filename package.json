@@ -2,9 +2,10 @@
   "dependencies": {
     "axios": "^1.4.0",
     "cheerio": "^1.0.0-rc.12",
+    "prompt-sync": "^4.2.0",
     "puppeteer": "^21.0.2"
   },
-  "name": "proyek-kegabutan",
+  "name": "autofill-survey-siam-ub",
   "version": "1.0.0",
   "main": "kuisioner.js",
   "scripts": {
@@ -12,5 +13,11 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "bin": "./kuisioner.js",
+  "pkg": {
+    "assets": ["node_modules"],
+    "target": ["node18-linux-x64", "node18-mac-x64", "node18-win-x64"],
+    "outputPath": "dist"
+  }
 }
