@@ -24,7 +24,7 @@ async function main() {
     page = await browser.newPage();
     const response = await page.goto("https://siam.ub.ac.id/notifikasi.php");
     const chain = response.request().redirectChain();
-    console.log(chain.length); // Return 1
+
     if (chain.length > 0) {
         console.log("Your Login Credentials is FALSE! Stopping program immediately")
         page.close()
