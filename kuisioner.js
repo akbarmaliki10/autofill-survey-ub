@@ -79,6 +79,7 @@ async function main() {
             await page.close()
             page = await browser.newPage();
             await page.goto("https://siam.ub.ac.id/notifikasi.php")
+            index--;
         }
 
         await page.waitForSelector("tr.text td a")
@@ -108,6 +109,7 @@ async function main() {
                 radio[index].checked = true
             }
             document.getElementById("saran").value = "terima kasih semoga berkah"
+            delay(1000)
             document.getElementById("form_kuis").submit()
         })
         page.close()
